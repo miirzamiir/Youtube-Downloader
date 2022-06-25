@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,26 +25,26 @@
             <button type="submit">check</button>
         </form>
 
-        <iframe src={{ embeded_url }}>
+        <iframe src="https://youtube.com/embed/{{id}}">
         </iframe>
 
         <p> choose which one to download</p>
         <div id="buttons">
             <div>
-                <a href="#">audio</a>
+                <a href="{% url 'low_vid' id %}">low quality video</a>
             </div>
             <div>
-                <a href="#">low quality</a>
+                <a href="{% url 'audio' id %}">audio</a>
             </div>
             <div>
-                <a href="#">high quality</a>
+                <a href="{% url 'high_vid' id %}">high quality video</a>
             </div>
 
         </div>
     </div>
 
     <div id="footer">
-        created by <a href="www.github.com/miirzamiir">miirzamiir</a>
+        created by <a href="https://www.github.com/miirzamiir">miirzamiir</a>
     </div>
 </body>
 
